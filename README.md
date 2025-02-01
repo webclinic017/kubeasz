@@ -1,3 +1,22 @@
+kubeasz is committed to providing tools for rapid deployment of highly available k8s clusters, and also strives to become a reference book for k8s practice and use; based on binary deployment and automation using ansible-playbook; providing one-click installation scripts, and also step-by-step installation of each component according to the installation guide.
+
+kubeasz assembles each individual component into a complete cluster, providing the most flexible configuration capabilities, and can set almost any parameter of any component; at the same time, it presets a set of well-running default configurations for cluster creation, and even automatically creates a BGP Route Reflector network mode suitable for large-scale clusters.
+
+Cluster features Master high availability, offline installation, multi-architecture support (amd64/arm64) Cluster version kubernetes v1.24, v1.25, v1.26, v1.27, v1.28, v1.29, v1.30, v1.31 Runtime containerd v1.6.x, v1.7.x Network calico, cilium, flannel, kube-ovn, kube-router [news] kubeasz passed cncf consistency test Details
+
+Recommended version comparison
+
+Kubernetes 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 kubeasz 3.1.1 3.2.0 3.6.2 3.6.2 3.6.2 3.6.2 3.6.2 3.6.3 3.6.4 3.6.5 Supported systems Alibaba Linux 2.1903, 3.2104(notes) Alma Linux 8, 9 Anolis OS 8.x RHCK, 8.x ANCK CentOS/RHEL 7, 8, 9 Debian 10, 11(notes) Fedora 34, 35, 36, 37 Kylin Linux Advanced Server V10 麒麟V10 Tercel, Lance openSUSE Leap 15.x(notes) Rocky Linux 8, 9 Ubuntu 16.04, 18.04, 20.04, 22.04, 24.04 Supports most Linux distributions that use systemd. If you have any problems with the installation, please check the documentation first; if a system that supports installation is not on the list, please submit a PR to inform us.
+
+Quick Guide Quickly experience the test environment of k8s cluster on a single machine--AllinOne deployment
+
+Installation Guide 00-Planning cluster and configuration introduction 02-Install etcd cluster 04-Install master node 06-Install cluster network 01-Create certificate and installation preparation 03-Install container runtime 05-Install node 07-Install cluster plug-in Usage Guide Common plug-ins + DNS dashboard metrics-server prometheus efk Cluster management + Manage node nodes Manage master nodes Manage etcd nodes Upgrade cluster Backup and restore Feature experiment NetworkPolicy RollingUpdate HPA Surrounding ecology harbor helm jenkins gitlab argocd Communication WeChat: k8s&kubeasz practice, search WeChat ID badtobone, please note in the format (${city}-${github user name}), and join the group chat after verification. Recommended reading Kubernetes Architect Course Kubernetes-the-hard-way Feisky-Kubernetes Guide Opsnull Installation Tutorial Contribution & Acknowledgement Welcome to submit Issues and PRs to participate in the project maintenance! Thank you for your attention and support!
+
+How to PR How to donate Copyright 2017 gjmzj (jmgaozz@163.com) Apache License 2.0, see LICENSE file for details.
+
+
+
+
 <img alt="kubeasz-logo" width="320" height="100" src="pics/kubeasz.svg">  <a href="docs/mixes/conformance.md"><img align="right" alt="conformance-icon" width="75" height="100" src="https://www.cncf.io/wp-content/uploads/2020/07/certified_kubernetes_color-1.png"></a>
 
 **kubeasz** 致力于提供快速部署高可用`k8s`集群的工具, 同时也努力成为`k8s`实践、使用的参考书；基于二进制方式部署和利用`ansible-playbook`实现自动化；既提供一键安装脚本, 也可以根据`安装指南`分步执行安装各个组件。
